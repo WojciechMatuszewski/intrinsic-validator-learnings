@@ -1,0 +1,36 @@
+{
+  "name": "recreation",
+  "version": "0.1.0",
+  "bin": {
+    "recreation": "bin/recreation.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "bootstrap": "npm run cdk bootstrap -- --qualifier cdval --toolkit-stack-name CDValidatorBootstrap",
+    "deploy": "npm run cdk deploy",
+    "destroy": "npm run cdk destroy",
+    "request": "npx tsx ./script.ts"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.106",
+    "@types/jest": "^27.5.2",
+    "@types/node": "18.8.2",
+    "@types/prettier": "2.6.0",
+    "aws-cdk": "2.44.0",
+    "esbuild": "0.15.10",
+    "jest": "^27.5.1",
+    "node-fetch": "3.2.10",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.9.1",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "@wheatstalk/cdk-intrinsic-validator": "^0.2.101",
+    "aws-cdk-lib": "2.44.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  }
+}
